@@ -24,7 +24,7 @@ export sonnetsaveas
 @matlab cd(WORKING_PATH)
 
 # Set up the MATLAB path to include SonnetLab
-pathstr = joinpath(WORKING_PATH, "Documents/MATLAB/v8.0/Scripts")
+pathstr = joinpath(WORKING_PATH, "Documents", "MATLAB", "v8.0", "Scripts")
 pathstr = normpath(pathstr)
 mat"path(path, $pathstr)"
 
@@ -52,7 +52,7 @@ sonnetdir() = begin
 end
 
 "Path to gds executable responsible for geometry conversion."
-gdspath() = normpath(joinpath(sonnetdir(), "bin/gds"))
+gdspath() = normpath(joinpath(sonnetdir(), "bin", "gds"))
 
 """
 Given a GDS-II file at `gds_str`, and an output file location `out_str`,
